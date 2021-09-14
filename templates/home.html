@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <!-- <p>
+    Taking care of your health concerns doesn't have to take a ton of time waiting in line at the doctor's office.
+    MED-247 offers high quality, on-demand video consulations with specialists matched just to your needs.
+  </p> -->
+
+
+<main role="main">
+
+    <div id="myCarousel" class="carousel slide pointer-event" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>Convenient</h1>
+                        <p>With at least two doctors always on call, you don't have to worry about the hassle of scheduling.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item active carousel-item-left">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Customized</h1>
+                        <p>With a wide variety of specialists in-network, your treatment plan will be tailored to your pre-existing condition.</p>
+                        <p><a class="btn btn-lg btn-primary" href="{{ url_for('list_articles') }}" role="button">Browse the Knowledge Base</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item-next carousel-item-left">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>Connected</h1>
+                        <p>At the core of MED-247 is a drive to help you get in touch with people who understand your situation.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Accessibility first. <span class="text-muted">It’s so easy.</span></h2>
+            <p class="lead">Taking care of your health concerns doesn't have to take a ton of time waiting in line at the doctor's office.
+              MED-247 offers high quality, on-demand video consulations with specialists matched just to your needs.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{  url_for('static', filename='img/pablo-arroyo-_SEbdtH4ZLM-unsplash.jpg')}}" alt="simple spelled in scrabble tiles">
+            <p class="text-muted small">Photo by <a href="https://unsplash.com/@pablogamedev?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pablo Arroyo</a> on <a href="https://unsplash.com/s/photos/easy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Expertise and enthusiasm. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">There are no bad questions here. Your needs should always be met with experienced hands and a warm smile.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{  url_for('static', filename='img/sammy-williams-38Un6Oi5beE-unsplash.jpg')}}" alt="doctor with thumbs up">
+            <p class="text-muted small">Photo by <a href="https://unsplash.com/@sammywilliams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sammy Williams</a> on <a href="https://unsplash.com/s/photos/smiling-doctor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, peer support. <span class="text-muted">You are not alone.</span></h2>
+            <p class="lead">Our system makes it easy to reach out to other patients and doctors that have the same special concerns.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{  url_for('static', filename='img/andrew-moca-yAGNjU4rtss-unsplash.jpg')}}" alt="doctor with thumbs up">
+            <p class="text-muted small">Photo by <a href="https://unsplash.com/@mocaandrew?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew Moca</a> on <a href="https://unsplash.com/s/photos/togetherness?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+
+{% endblock %}

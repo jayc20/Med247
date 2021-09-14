@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <h1 class="top-pad"> Page not found.</h1>
+    <p class="left-with-margin">You may wish to check your spelling if you entered the URL manually.</p>
+    <p class="left-with-margin"><a href="{{ url_for('home') }}">Click Here</a> to go to the Home Page</p>
+{% endblock %}

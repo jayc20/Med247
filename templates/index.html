@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <div class="top-pad">
+
+      <!-- Three columns of text for featured articles-->
+      <div class="row">
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-library.com%2Ficon%2Fhearing-icon-1.html&psig=AOvVaw3mpUkXhqf5e7lWg_VwQI_u&ust=1629067863741000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCPiuzu_MsfICFQAAAAAdAAAAABAD" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <h2>Who's on Call?</h2>
+          <p>We know you care about who cares for you, so we do too. Medical professionals should not <i>only</i> be knowledgeable; they should be personable too.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <h2>Our Mission</h2>
+          <p>Too often, the healthcare system places patients with pre-existing conditions at a disadvantage. This was further exacerbated by COVID. We aim to fill the gap.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <h2>Research-backed Approach</h2>
+          <p>Several papers have demonstrated the efficacy of telehealth solutions. They list both the issues and the benefits of existing systems.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+    <!-- formatting for non-featured articles -->
+    <div class="top-pad">
+        <h1>The Knowledge Base</h1>
+        <h2><span class="text-muted">Have a quick question? You can find answers here.</span></h2>
+    </div>
+    <div>
+        {% for id, article in display_dict.items() %}
+            <div class="well">
+                <p>
+                    <a href="{{ url_for('show_article', article_title=id) }}">{{article['name'] }}</a>
+                    <small> {{ article['category'] }}</small> <!-- could add pre:: icons styling -->
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+
+
+  </div>
+{% endblock %}

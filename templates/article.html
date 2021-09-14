@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <div class="top-pad">
+        <h1>{{ article['name'] }}
+            <small>{{ article['category'] }}</small>
+        </h1>
+    </div>
+    <p class="left-with-margin">{{ article['content'] }}</p>
+
+{% endblock %}
